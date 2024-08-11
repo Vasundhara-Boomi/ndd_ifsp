@@ -1,0 +1,52 @@
+<html>
+<head>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <title>NDD DETECTION</title>
+ <link rel="stylesheet" href="static/css/main.css">
+    <script src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" sizes="16x16" href="static\img\favicon-16x16.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head> 
+<body>
+   <nav id="navbar" class="container-site">      
+      <ul><div id="navbar-ul">
+          <li><h1 style="color:#fff;margin-top: -10px;">NeuroDetect</h1></li>
+          <li><a href="{{ url_for('index') }}" style="color:#fff">Home</a></li>
+          <li><a href="#about" style="color:#fff">About</a></li>
+          <li>
+              <form action="/main" method="post" id="toPredict">
+                  <a href="#" onclick="document.getElementById('toPredict').submit();" style="color: #fff;">Predict</a>
+              </form>
+              </li>
+<!--                <li><a href="#gait-predict" style="color:#fff">Gait Analysis</a></li> -->
+          <li><a href="#footer" style="color:#fff">Contact Us</a></li>
+          <li><a href="{{ url_for('history') }}" style="color:#fff">View History</a></li>
+          <li><a href="{{ url_for('logout') }}" style="color:#fff">Logout</a></li>
+
+      </div>
+       </ul>
+  </div>
+</nav>
+<br><br>
+ <div class="container">
+ <div class="row">
+ 
+ <center><h1 style="padding:30px;font-weight: 600;font-size: 3.2em">NEURODEGENERATIVE DISEASE DETECTION</h1></center>
+ </div>
+ 
+<form class="form-inline" action = "/predict" method = "post" enctype="multipart/form-data">
+    <center><label><h2>Upload image: </h2></label>
+    <input type="file" name="file" style="margin-left: 100px;"/><br></center>
+ <center>
+    <label><h2>Upload accelerometer data: </h2></label><br>
+    <input  style="margin-left: 100px;" type="file" name="accelerometer"/><br><br></center>
+ <center>
+   <br><input type = "submit" class="btn btn-success" value="Predict"></center>
+ </form>
+ 
+ </div>
+</body>
+</html>

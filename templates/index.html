@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDD</title>
+    <link rel="stylesheet" href="static/css/main.css">
+    <script src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/png" sizes="16x16" href="static\img\favicon-16x16.png">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar" class="container-site">      
+            <ul><div id="navbar-ul">
+                <li><h1 style="color:#fff;margin-top: -10px;">NeuroDetect</h1></li>
+                <li><a href="{{ url_for('index') }}" style="color:#fff">Home</a></li>
+                <li><a href="#about" style="color:#fff">About</a></li>
+                <li>
+                    <form action="/main" method="post" id="toPredict">
+                        <a href="#" onclick="document.getElementById('toPredict').submit();" style="color: #fff;">Predict</a>
+                    </form>
+                    </li>
+ <!--                <li><a href="#gait-predict" style="color:#fff">Gait Analysis</a></li> -->
+                <li><a href="#footer" style="color:#fff">Contact Us</a></li>
+                <li><a href="{{ url_for('history') }}" style="color:#fff">View History</a></li>
+                <li><a href="{{ url_for('logout') }}" style="color:#fff">Logout</a></li>
+
+            </div>
+             </ul>
+        </div>
+    </nav>
+    <header class="container-site ">
+        <div class="bgimage">   
+            <div class="headsection">
+                <h1 style="color: white; text-align: left;"> Early Detection <br>of Motor Disorder<br> Symptoms</h1>
+                <p style="color: white;">"Utilizing tremor and gait pattern analysis to identify early signs of </br> neurodegenerative diseases, enhancing proactive treatment."</p>
+            </div>
+            <!-- <div style="margin-left: 20px;"><img class="doctor" src="https://theembazaar.com/demo/vivotheme/naino-med/assets/images/doctor_banner.png" alt="Doctor" width="400px" >
+            </div> -->
+            <br><br>
+            <div style="margin-top:250px;">
+                <form action="/main" method="post">
+                    <input type="submit" value="Predict" class="bn15">
+                </form>
+            </div>
+        </div>
+    </div>  
+    </header>
+    <section class="container-site">
+        
+            <div id="about" class="wrapper">
+                <!-- First row of 3 cards -->
+                <div class="row">
+                    <div class="card">
+                        <input type="checkbox" id="card1" class="more" aria-hidden="true">
+                        <div class="content">
+                            <div class="front" style="background-image: url('static/img/witmotion.jpg');">
+                                <div class="inner">
+                                    <h2>IMU Sensor</h2>
+                                    
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <div class="button-container">
+                                        <div class="description">
+                                            <p>Inertial Measurement Unit (IMU) sensor detects and records movements of the body, such as gait patterns. It plays a vital role in identifying abnormalities.</p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+      
+                    <div class="card">
+                        <input type="checkbox" id="card2" class="more" aria-hidden="true">
+                        <div class="content">
+                            <div class="front" style="background-image: url('static/img/pen_display.png');">
+                                <div class="inner">
+                                    <h2>Pen Display</h2>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <div class="button-container">
+                                        <div class="description">
+                                            <p>A pen display is a digital device that allows users to draw directly on a screen using a stylus. In the context of neurodegenerative disease detection, pen displays are used to capture changes in handwriting or drawing patterns. </p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+      
+                    <div class="card">
+                        <input type="checkbox" id="card3" class="more" aria-hidden="true">
+                        <div class="content">
+                            <div class="front" style="background-image: url('static/img/brain.jpg');">
+                                <div class="inner">
+                                    <h2>NDD</h2>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <div class="button-container">
+                                        <div class="description">
+                                            <p>Neurodegenerative diseases are conditions characterized by the progressive degeneration of nerve cells in the brain or spinal cord. Early detection of these diseases is crucial for initiating appropriate treatment.</p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+              </div>
+    </section>
+    
+
+    
+        
+   
+        <div class="stat-main">
+            
+            <div class="cover">
+                <div class="stat-flex ">
+                    <div class="elements-stat ">
+                        <img src="static/img/ed.jpg"  width="120px">
+                        <h1>EARLY</h1>
+                        <h3>DETECTION</h3>
+                    </div>
+                    <div class="elements-stat">
+                        <img src="static/img/accuracy.png"  width="120px">
+                        <h1>90%+</h1>
+                        <h3>ACCURACY</h3>
+                    </div>
+                    <div class="elements-stat">
+                        <img src="static/img/novelty.png"  width="120px">
+                        <h1>NOVELTY</h1>
+                        <h3></h3>
+                    </div>
+                    <div class="elements-stat">
+                        <img src="static/img/efficiency.jpg"  width="140px" height="100px">
+                        <h1>EFFICIENCY</h1>
+                        <h3></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</body>
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            
+            
+                <center>
+                <h3>Developed by</h3>
+                <p>Students of Information Technology</p>
+                <p>SSN College of Engineering</p>
+            </center>
+                
+        </div>
+    </div>
+    <div class="text-center">
+        <p>&copy; 2024 NeuroDetect. All Rights Reserved.</p>
+    </div>
+</footer>
+</html>
